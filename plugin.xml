@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cr.plugins.nsurlrequestignoressl"
+        version="3.3.2">
+
+  <name>NSURLRequestIgnoreSSL</name>
+
+  <description>
+    This plugin disables all SSL error messages for local testing.
+  </description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <!-- ios -->
+ 	<platform name="ios">
+ 		<config-file target="config.xml" parent="/*">
+ 			<feature name="NSURLRequestIgnoreSSL">
+ 				<param name="ios-package" value="NSURLRequestIgnoreSSL" />
+ 			</feature>
+ 		</config-file>
+ 		<header-file src="src/NSURLRequest+IgnoreSSL.h" />
+ 		<source-file src="src/NSURLRequest+IgnoreSSL.m" />
+ 	</platform>
+</plugin>
